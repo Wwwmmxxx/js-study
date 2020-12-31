@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div desc="后盾人">houdunren</div>
+    <div desc="hdcms">hdcms</div>
+  </body>
+  <script>
+    const divMap = new Map();
+    const divs = document.querySelectorAll("div");
+
+    divs.forEach((div) => {
+      divMap.set(div, {
+        content: div.getAttribute("desc"),
+      });
+    });
+
+    // 第一个参数 => value,第二个参数 => index
+    divMap.forEach((config, elem) => {
+      elem.addEventListener("click", function () {
+        console.log(divMap.get(this).content);
+        console.log(this);
+        console.log(config);
+      });
+    });
+  </script>
+</html>
