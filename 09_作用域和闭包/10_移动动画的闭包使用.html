@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      button {
+        position: absolute;
+      }
+    </style>
+    <button message="houdunren">houdunren</button>
+    <button message="hdcms">hdcms</button>
+    <script>
+      let btns = document.querySelectorAll("button");
+      btns.forEach(function (item) {
+        // 将left放到外层作用域中后, 会产生问题 , 多次点击按钮后 , 按钮的移动速度会变快
+        // 这是由于点击多次后letf++的次数变多 , 所以速度越来越快
+        // 可以设置一个interval的flag进行解决
+        let left = 1;
+        let intervalFlag = false;
+        item.addEventListener("click", function () {
+          // 此时按钮点击多次后 , 由于产生了多个定时器函数 , 所以导致按钮抖动的情况
+          // 所以可以将left放到外层作用域中
+          if (!intervalFlag) {
+            intervalFlag = !intervalFlag;
+            setInterval(function () {
+              item.style.left = left++ + "px";
+            }, 100);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
