@@ -10,6 +10,3 @@ console.log(obj + '1');
 
 // 如果使用场景不确定, 则使用default , 大部分的default会作为数值使用
 console.log(obj == '1');
-
-
-
