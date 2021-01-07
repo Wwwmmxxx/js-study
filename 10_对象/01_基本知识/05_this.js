@@ -14,6 +14,3 @@ console.log(obj1.get())
 let obj2 = obj1;
 obj1 = null;
 console.log(obj2.get()) // 此时报错 , 因为obj1此时已经不存在 , 导致obj1.name无法获取
-
-
-

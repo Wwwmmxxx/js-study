@@ -7,4 +7,3 @@ let obj1 = {
 // 嵌套解构时 , 只能默认使用对象内的属性
 let { stuName, lesson: { title } } = obj1;
 console.log(title);
-
