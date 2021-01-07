@@ -10,7 +10,13 @@ delete obj.age;
 // 3.1 使用hasOwnProperty方法检测
 console.log(obj.hasOwnProperty('username'));
 // 3.2 使用in方法 => in方法会在原型对象上检测
+let hd = {
+  web: "houdunren.com"
+}
+Object.setPrototypeOf(obj, hd); // 在原型上设置hd
+console.log(obj);
 console.log('username' in obj);
+console.log(obj.hasOwnProperty(hd));
 
 // 4. 获取属性名
 // 4.1 使用Object.getOwnPropertyNames获取对象的属性名集合
