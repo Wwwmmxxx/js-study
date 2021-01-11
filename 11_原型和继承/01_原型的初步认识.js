@@ -1,3 +1,4 @@
+// 原型在属性中一般为__proto__
 let arr = ['徐逸飞'];
 console.log(arr.concat('xuyifei'));
 
