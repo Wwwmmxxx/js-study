@@ -19,4 +19,3 @@ console.log(User.prototype.constructor === User); // 返回true
 // 可以通过.prototype.constructor的方式新建对象
 let lisi = new User.prototype.constructor('里斯'); 
 lisi.show();
-
