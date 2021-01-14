@@ -10,3 +10,5 @@ console.log(JSON.stringify(Object.getOwnPropertyDescriptors(user)));
 
 // 2. 使用Object.isSealed()判断对象是封闭
 console.log(Object.isSealed(user)); // true => 表示封闭
+
+
