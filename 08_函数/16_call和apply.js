@@ -1,5 +1,5 @@
 let lisi = {name: '李四'};
-let wangwu = { name: '王五' }
+let wangwu = { name: '王五' };
 
 function User(web, url) {
   console.log(this.name);
