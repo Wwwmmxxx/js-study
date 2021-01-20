@@ -10,3 +10,4 @@ let hd = Object.create(null, {
 console.log(hd);
 // 直接报错 , 因为原型中是没有hasOwnProperty方法
 console.log(hd.hasOwnProperty('name'));
+console.log(Object.keys(hd));
