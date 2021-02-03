@@ -1,6 +1,5 @@
 // 只有一个保护属性时
 const HOST = Symbol('主机');
-
 // 若有多个保护函数时
 const PROTECTEDS = Symbol();
 
