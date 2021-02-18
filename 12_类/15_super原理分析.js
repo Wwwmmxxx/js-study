@@ -39,7 +39,7 @@ let xj2 = {
     // 但是即使是这样也是会有隐患的 , 当hd2也有父级时 , 此时即便即使用了call , 但是this是指向自己的 , 会产生死循环
     // this.__proto__.show.call(this);
     // 为了解决这个问题 , 出现了super关键字 , super只做原型攀升 , 要区分this
-    // super只能针对方法 , 而不能针对属性
+    // super只能针对方法 , 而不能针对属性 , 所以不能再show:function(){}形式中使用
     super.show();
     console.log('xj.show()');
   }
