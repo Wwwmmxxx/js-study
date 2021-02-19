@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    // 此时是在顶级作用域window中定义的
+    let url = 'url';
+  </script>
+  <script type="module">
+    // 模块是具有独立作用域的
+    let site = '后盾人'
+  </script>
+  <body></body>
+  <script>
+    // 所以此时在下面的site是访问不到上方作用域的
+    console.log(site);
+    // 此时url是可以访问的
+    console.log(url);
+  </script>
+</html>

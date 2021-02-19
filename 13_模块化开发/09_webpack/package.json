@@ -1,0 +1,13 @@
+{
+  "name": "09_webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "09_.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"webpack --mode development --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script type="module">
+    import { site, show, User } from "./06_.js";
+    show();
+    User.render();
+
+    // 当需要使用批量时,使用*
+    import * as api from "./06_.js";
+    // 当调用方法时 , 需要使用api.的形式
+    api.show();
+    api.User.render();
+
+    // 如果需要导入的属性,当前已经被使用,可以使用别名的方法
+    import { site as s } from "./06_.js";
+    console.log(s);
+
+    // 使用默认导出的属性 , 就不需要使用{}符号 , 取任意名称都可以
+    // 一般来说 , 默认导入的名称一般为文件名
+    import User from "./06_.js";
+
+    // 同时导入默认和具名
+    import User, { site } from "./06_.js";
+  </script>
+</html>

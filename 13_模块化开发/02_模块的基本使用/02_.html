@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script type="module">
+    // 如果使用了模块,需要对script标签追加type="module"属性
+    // 这里一定要使用./02_.js , 但是在打包工具中很多时候是不用的 , 因为打包工具会将其按照自己的规则引用
+    import { title, show } from "./02_.js";
+    console.log(title);
+    show();
+  </script>
+</html>

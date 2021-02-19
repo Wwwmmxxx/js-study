@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script type="module">
+    import {} from "./05_1.js";
+    // 此时即便执行很多次 , 但是也只加载一次
+    // 即便被不同的文件读取 , 但是依然只加载一次 , 这是为了避免重复请求
+    import {} from "./05_1.js";
+    import {} from "./05_1.js";
+    import {} from "./05_1.js";
+  </script>
+</html>
