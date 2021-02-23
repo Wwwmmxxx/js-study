@@ -1,3 +1,5 @@
+// JS是单线程的
+
 // 宏任务
 setTimeout(() => {
   console.log('定时器')

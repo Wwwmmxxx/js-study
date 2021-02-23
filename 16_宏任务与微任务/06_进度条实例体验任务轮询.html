@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="hd" style="background-color: aqua;"></div>
+  </body>
+  <script>
+    function handle() {
+      let i = 0;
+      (function run() {
+        if (++i <= 100) {
+          setTimeout(function () {
+            hd.innerHTML = i;
+            hd.style.width = i + "%";
+            console.log(i);
+            run();
+          }, 20);
+        }
+      })();
+    }
+    handle();
+  </script>
+</html>
