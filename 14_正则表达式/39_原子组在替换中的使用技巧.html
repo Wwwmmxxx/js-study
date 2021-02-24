@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <a style="color: red" href="http://www.hdcms.com"> 开源系统 </a>
+      <a href="http://houdunren.com">后盾人</a>
+      <h4>http://www.hdcms.com</h4>
+    </main>
+  </body>
+  <script>
+    const main = document.querySelector("body main");
+    const reg = /(<a.*href=['"])(http)(:\/\/)(www\.)?(hdcms|houdunren)/i;
+    // 如果使用过多的原子组的话,可以使用展开语法获取
+    main.innerHTML = main.innerHTML.replace(reg, (v, ...args) => {
+      args[1] += "s";
+      args[3] = args[3] || 'www.';
+      return args.splice(0,5).join("");
+    });
+  </script>
+</html>
