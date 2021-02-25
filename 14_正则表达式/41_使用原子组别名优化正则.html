@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <a id="a1" name="a1" href="https://www.houdunren.com">后盾人</a>
+      <a href="https://www.hdcms.com">hdcms</a>
+      <a href="https://www.sina.com.cn">新浪</a>
+    </main>
+  </body>
+  <script>
+    const main = document.querySelector('body main');
+    const reg = /<a.*?href=(['"])(?<link>.*?)\1>(?<title>.*?)<\/a>/ig
+    // 在元素中有一个属性名为group,这个属性就是别名
+    console.log(main.innerHTML.match(reg));
+
+    for (const iterator of main.innerHTML.matchAll(reg)) {
+      console.log(iterator['groups'])
+    }
+  </script>
+</html>
