@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+  // 顺序:1 => 2
+  function loadImag(src,resolve,reject){
+    let image = new Image()
+    image.src = src;
+    // 2. 再完成图片的放置
+    image.onload = ()=>{
+      resolve(image)
+    };
+    image.onerror = reject;
+  }
+  loadImag("images/test.jpg",(image)=>{
+    document.body.appendChild(image)
+  },()=>{
+    console.log('图片加载失败');
+  });
+
+  // 1.完成输出
+  console.log('后盾人');
+</script>
+</html>
